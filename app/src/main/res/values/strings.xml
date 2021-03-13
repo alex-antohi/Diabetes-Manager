@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Diabetes Manager</string>
+    <string name="login">Log In</string>
+    <string name="singup">Sign Up</string>
+    <string name="pacient">Patient</string>
+    <string name="doctor">Doctor</string>
+
+    <!--    LABELS-->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confPassword">Confirm Password</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="speciality">Speciality</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="disease">Disease</string>
+    <string name="treatment">Treatment</string>
+
+    <!--    HINTS-->
+    <string name="emailHint"><i>Email</i></string>
+    <string name="passwordHint"><i>Password</i></string>
+    <string name="confPasswordHint"><i>Confirm Password</i></string>
+    <string name="firstNameHint"><i>First Name</i></string>
+    <string name="lastNameHint"><i>Last Name</i></string>
+    <string name="specialityHint"><i>Speciality</i></string>
+    <string name="phoneNumberHint"><i>Phone Number</i></string>
+
+    <string name="next">Next</string>
+    <string name="prog1">1/3</string>
+    <string name="prog2">2/3</string>
+    <string name="prog3">3/3</string>
+    <string name="checkEmail">Check your email to verify your account</string>
+    <string-array name="diseases_array">
+        <item><i>Select One</i></item>
+        <item>Type 1 diabetes</item>
+        <item>Type 2 diabetes</item>
+        <item>Gestational diabetes</item>
+    </string-array>
+    <string-array name="treatment_array">
+        <item><i>Select One</i></item>
+        <item>Hihihi</item>
+        <item>Hahaha</item>
+        <item>Nu stiu</item>
+    </string-array>
+</resources>

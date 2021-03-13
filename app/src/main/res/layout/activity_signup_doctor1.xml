@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBasic"
+    tools:context=".SignupDoctor1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/signupDoctor1_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/firstNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/firstName"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/firstNameEditDoctor"
+        app:layout_constraintStart_toStartOf="@+id/firstNameEditDoctor"
+        app:layout_constraintTop_toBottomOf="@+id/signupDoctor1_toolbar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/firstNameEditDoctor"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/firstNameHint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/lastNameText"
+        app:layout_constraintStart_toStartOf="@+id/lastNameText"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameText" />
+
+    <TextView
+        android:id="@+id/lastNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/lastName"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/lastNameEditDoctor"
+        app:layout_constraintStart_toStartOf="@+id/lastNameEditDoctor"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEditDoctor" />
+
+    <EditText
+        android:id="@+id/lastNameEditDoctor"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/lastNameHint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/specialityText"
+        app:layout_constraintStart_toStartOf="@+id/specialityText"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameText" />
+
+    <TextView
+        android:id="@+id/specialityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/speciality"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editSpeciality"
+        app:layout_constraintStart_toStartOf="@+id/editSpeciality"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEditDoctor" />
+
+    <EditText
+        android:id="@+id/editSpeciality"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/specialityHint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumberText"
+        app:layout_constraintStart_toStartOf="@+id/phoneNumberText"
+        app:layout_constraintTop_toBottomOf="@+id/specialityText" />
+
+    <TextView
+        android:id="@+id/phoneNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/phoneNumber"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editPhoneNumberDoctor"
+        app:layout_constraintStart_toStartOf="@+id/editPhoneNumberDoctor"
+        app:layout_constraintTop_toBottomOf="@+id/editSpeciality" />
+
+    <EditText
+        android:id="@+id/editPhoneNumberDoctor"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/phoneNumberHint"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/next1Button"
+        app:layout_constraintStart_toStartOf="@+id/next1Button"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberText" />
+
+    <Button
+        android:id="@+id/next1Button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:onClick="next1"
+        android:text="@string/next"
+        app:layout_constraintBottom_toTopOf="@+id/progres1Doctor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPhoneNumberDoctor" />
+
+    <TextView
+        android:id="@+id/progres1Doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/prog1"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next1Button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

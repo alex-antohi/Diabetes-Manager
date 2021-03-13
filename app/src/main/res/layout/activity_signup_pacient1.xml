@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.DiabetesManager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBasic"
+    tools:context=".SignupPacient1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/signupPacient1_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/firstNameTextPacient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/firstName"
+        android:text="@string/firstName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/firstNameEditPacient"
+        app:layout_constraintStart_toStartOf="@+id/firstNameEditPacient"
+        app:layout_constraintTop_toBottomOf="@+id/signupPacient1_toolbar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/firstNameEditPacient"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/firstNameHint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/lastNameTextPacient"
+        app:layout_constraintStart_toEndOf="@+id/lastNameTextPacient"
+        app:layout_constraintStart_toStartOf="@+id/lastNameTextPacient"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameTextPacient" />
+
+    <EditText
+        android:id="@+id/lastNameEditPacient"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/lastNameHint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/diseaseText"
+        app:layout_constraintStart_toEndOf="@+id/diseaseEditPacient"
+        app:layout_constraintStart_toStartOf="@+id/diseaseText"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameTextPacient" />
+
+    <TextView
+        android:id="@+id/lastNameTextPacient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/lastName"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/lastNameEditPacient"
+        app:layout_constraintStart_toEndOf="@+id/lastNameEditPacient"
+        app:layout_constraintStart_toStartOf="@+id/lastNameEditPacient"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEditPacient" />
+
+    <Spinner
+        android:id="@+id/diseaseEditPacient"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:entries="@array/diseases_array"
+        android:popupBackground="@color/colorDark"
+        app:layout_constraintBottom_toTopOf="@+id/treatmentText"
+        app:layout_constraintStart_toEndOf="@+id/diseaseText"
+        app:layout_constraintStart_toStartOf="@+id/treatmentText"
+        app:layout_constraintTop_toBottomOf="@+id/diseaseText" />
+
+    <TextView
+        android:id="@+id/diseaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/disease"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/diseaseEditPacient"
+        app:layout_constraintStart_toEndOf="@+id/treatmentText"
+        app:layout_constraintStart_toStartOf="@+id/diseaseEditPacient"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEditPacient" />
+
+    <TextView
+        android:id="@+id/treatmentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/treatment"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTreatmentPacient"
+        app:layout_constraintStart_toEndOf="@+id/editTreatmentPacient"
+        app:layout_constraintStart_toStartOf="@+id/editTreatmentPacient"
+        app:layout_constraintTop_toBottomOf="@+id/diseaseEditPacient" />
+
+    <Spinner
+        android:id="@+id/editTreatmentPacient"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:entries="@array/treatment_array"
+        android:popupBackground="@color/colorDark"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumberTextPacient"
+        app:layout_constraintStart_toEndOf="@+id/phoneNumberTextPacient"
+        app:layout_constraintStart_toStartOf="@+id/phoneNumberTextPacient"
+        app:layout_constraintTop_toBottomOf="@+id/treatmentText" />
+
+    <TextView
+        android:id="@+id/phoneNumberTextPacient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/phoneNumber"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editPhoneNumberPacient"
+        app:layout_constraintStart_toEndOf="@+id/editPhoneNumberPacient"
+        app:layout_constraintStart_toStartOf="@+id/editPhoneNumberPacient"
+        app:layout_constraintTop_toBottomOf="@+id/editTreatmentPacient" />
+
+    <EditText
+        android:id="@+id/editPhoneNumberPacient"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/phoneNumberHint"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/next1ButtonPacient"
+        app:layout_constraintStart_toEndOf="@+id/progres1Pacient"
+        app:layout_constraintStart_toStartOf="@+id/next1ButtonPacient"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberTextPacient" />
+
+    <Button
+        android:id="@+id/next1ButtonPacient"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:onClick="next1"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/progres1Pacient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/firstNameTextPacient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPhoneNumberPacient" />
+
+    <TextView
+        android:id="@+id/progres1Pacient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prog1"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next1ButtonPacient"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

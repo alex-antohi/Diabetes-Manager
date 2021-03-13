@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.diabetesmanager">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DiabetesManager">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".SignupActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <!--        SIGNUP PACIENT-->
+        <activity
+            android:name=".SignupPacient1"
+            android:parentActivityName=".SignupActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SignupActivity" />
+        </activity>
+        <activity
+            android:name=".SignupPacient2"
+            android:parentActivityName=".SignupPacient1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SignupPacient1" />
+        </activity>
+        <activity
+            android:name=".SignupPacient3"
+            android:parentActivityName=".SignupPacient2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SignupPacient2" />
+        </activity>
+
+<!--        SIGNUP DOCTOR-->
+        <activity
+            android:name=".SignupDoctor1"
+            android:parentActivityName=".SignupActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SignupActivity" />
+        </activity>
+        <activity
+            android:name=".SignupDoctor2"
+            android:parentActivityName=".SignupDoctor1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SignupDoctor1" />
+        </activity>
+        <activity
+            android:name=".SignupDoctor3"
+            android:parentActivityName=".SignupDoctor2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SignupDoctor2" />
+        </activity>
+
+    </application>
+
+</manifest>
